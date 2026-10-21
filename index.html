@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaScript - MUHAMMAD FACHRUDDIN (312510103)</title>
+</head>
+
+<body>
+    <h1>Pengenalan JavaScript</h1>
+
+    <!-- Latihan 1 & 2: Output -->
+    <p id="pesan">Konten awal.</p>
+
+    <hr>
+
+    <!-- Latihan 6: Form bilangan genap atau ganjil -->
+    <h3>Latihan 6: Cek Bilangan</h3>
+    <label for="bilangan">Masukkan bilangan bulat: </label>
+    <input type="number" id="bilangan" step="1">
+    <button type="button" onclick="cekBilangan()">Periksa</button>
+    <p id="hasilBilangan"></p>
+
+    <hr>
+
+    <!-- Latihan 7: Mengubah warna halaman -->
+    <h3>Latihan 7: Ubah Warna Latar</h3>
+    <button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
+    <button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
+    <button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
+
+    <hr>
+
+    <!-- Latihan 8 & Eksperimen 10: DOM dan checkbox menu makanan -->
+    <h3>Daftar Menu Makanan</h3>
+    <label><input type="checkbox" class="menu" value="5000"> Ayam Goreng Rp5.000</label><br>
+    <label><input type="checkbox" class="menu" value="500"> Tempe Rp500</label><br>
+    <label><input type="checkbox" class="menu" value="2500"> Telur Dadar Rp2.500</label><br>
+    <label><input type="checkbox" class="menu" value="3000"> Es Teh Rp3.000</label><br>
+    <label><input type="checkbox" class="menu" value="10000"> Nasi Goreng Rp10.000</label><br>
+    <p>Total: Rp<span id="total">0</span></p>
+
+    <hr>
+
+    <!-- F. Mini Project: Kalkulator Nilai Mahasiswa -->
+    <h3>Mini Project: Kalkulator Nilai Mahasiswa</h3>
+    <form id="formKalkulator">
+        <label for="nilaiTugas">Nilai Tugas (0-100):</label><br>
+        <input type="number" id="nilaiTugas" min="0" max="100" required><br><br>
+
+        <label for="nilaiUts">Nilai UTS (0-100):</label><br>
+        <input type="number" id="nilaiUts" min="0" max="100" required><br><br>
+
+        <label for="nilaiUas">Nilai UAS (0-100):</label><br>
+        <input type="number" id="nilaiUas" min="0" max="100" required><br><br>
+
+        <button type="button" onclick="prosesKalkulator()">Hitung Nilai Akhir</button>
+    </form>
+
+    <h4>Hasil Kelulusan:</h4>
+    <p>Nilai Akhir: <span id="hasilAkhir">-</span></p>
+    <p>Predikat: <span id="hasilPredikat">-</span></p>
+    <p>Status: <strong><span id="hasilStatus">-</span></strong></p>
+
+    <hr>
+
+    <!-- G. Eksperimen 11: Tombol Sembunyikan/Tampilkan HTML -->
+    <h3>Eksperimen Mandiri: Hide/Show Elemen</h3>
+    <button type="button" onclick="toggleElemen()">Sembunyikan / Tampilkan Teks</button>
+    <p id="teksToggle">Halo! Teks ini bisa disembunyikan dan dimunculkan kembali dengan tombol di atas.</p>
+
+    <!-- Memanggil script JavaScript diletakkan di paling bawah -->
+    <script src="script.js"></script>
+</body>
+
+</html>
